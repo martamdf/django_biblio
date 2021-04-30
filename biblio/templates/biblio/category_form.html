@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+{% block title %} Actualizar Libro {% endblock %}
+
+{% block content %}
+<body>
+    <h1>Formulario categoria</h1>
+    <form method="post"> 
+        {% csrf_token %} 
+        {{ form.as_p }} 
+        <input type="submit" value="Actualiza Categoría"> 
+    </form> 
+        <div>
+            
+        </div>      
+    </form>
+</body>
+{% endblock %}
+</html>

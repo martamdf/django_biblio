@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{% block title %} Bienvenido a La Biblioteca {% endblock %}
+
+{% block content %}
+<body>
+
+    <h1>Listado General de Libros</h1>
+    <ul>
+    {% for article in object_list %}
+        <li><a href="/biblio/{{ article.id }}/book_detail">{{ article.title }}</a>  - {{ article.author }}</li>
+    {% empty %}
+        <li>No hay Libros registrados ¡Registra el primero!</li>
+    {% endfor %}
+    </ul>
+</body>
+{% endblock %}
+</html>

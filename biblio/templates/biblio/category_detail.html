@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block title%} Bienvenido a La Biblioteca {%endblock%}
+
+{%block content%}
+<body>
+    <h1>Detalle de Categoría: {{ object.title }}</h1>
+
+<p>Nombre: <strong>{{ object.category_name }}</strong></p>
+
+<p>Si quieres, aquí puedes editar o borrar la categoría</p>
+
+<a href="/biblio/{{ category.id }}/category_update"> Editar Categoría </a>
+|
+<a href="category_confirm_delete">Borrar Categoría</a>
+
+    
+</body>
+
+{%endblock%}
+</html>
