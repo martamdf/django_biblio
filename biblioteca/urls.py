@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from biblio import views
-from biblio.views import HomeView, BooksUpdateView, BookDeleteView, BookDetailView, BookCreateView, CategoryCreateView, CategoryListView, CategoryDetailView, CategoryUpdateView, CategoryDeleteView
+from biblio.views import HomeView, BooksUpdateView, BookDeleteView, BookDetailView, BookCreateView, CategoryCreateView, CategoryListView, CategoryDetailView, CategoryUpdateView, CategoryDeleteView, search
 
 
 urlpatterns = [
@@ -25,5 +25,7 @@ urlpatterns = [
     path('biblio/<int:pk>/category_detail', CategoryDetailView.as_view(), name='category_detail'),
 
     #Búsqueda
+
+    path('biblio/busqueda.html', views.search, name='search'),
 
 ]

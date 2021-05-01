@@ -3,17 +3,11 @@
 {% block title %} Borrar Categoría {% endblock %}
 
 {% block content %}
-<body>
-    <h1>Borrar Categoría</h1>
-
-    <form method="POST">{% csrf_token %}
-        <p>¿Estás seguro de que quieres eliminar la categoría: "{{ category }}"?</p>
-        <input type="submit" value="¡Sí, eliminar la categoría ahora!">
-    </form>
-        <div>
-            
-        </div>      
-    </form>
-</body>
+    <div class="container">
+        <h1>Borrar Categoría</h1>
+            <form method="POST">{% csrf_token %}
+                <p>¿Estás seguro de que quieres eliminar la categoría: "{{ category }}"?</p>
+                <input type="submit" value="¡Sí, eliminar la categoría ahora!">
+            </form>
+    </div>
 {% endblock %}
-</html>

@@ -3,18 +3,15 @@
 {%block title%} Bienvenido a la Biblioteca {%endblock%}
 
 {%block content%}
-<body>
-    <h1>Título: {{ object.title }}</h1>
-        <p>Autor: </p>
-            <p>{{ object.author }}</p>
-        <p>Categorías: </p>
-        {% for categoria in object.categoria.all %}
-            <li>{{ categoria.category_name }}</li>
-        {% endfor %}
-<a href="/biblio/{{ book.id }}/update">Editar Libro </a>
-|
-<a href="book_confirm_delete">Borrar</a>
-
-</body>
+    <div class="container">
+        <h1>Título: {{ object.title }}</h1>
+            <p>Autor: {{ object.author }}</p>
+            <p>Categorías:</p>
+            {% for categoria in object.categoria.all %}
+                <li>{{ categoria.category_name }}</li>
+            {% endfor %}
+        <a href="/biblio/{{ book.id }}/update">Editar Libro </a>
+        |
+        <a href="book_confirm_delete">Borrar</a>
+    </div>
 {%endblock%}
-</html>

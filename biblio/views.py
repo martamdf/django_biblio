@@ -8,6 +8,7 @@ from biblio.forms import BookForm, CategoryForm
 from biblio.models import Book, Category
 from django.views.generic.edit import DeleteView
 from django.utils import timezone
+from .filters import BookFilter
 
 
 def index(request):
@@ -91,3 +92,7 @@ class CategoryDeleteView(DeleteView):
     success_url = reverse_lazy('categories')
 
 #TODO:Filtros
+def search(request):
+    book_list = Book.objects.all()
+    book_filter = BookFilter(request.GET, queryset=book_list)
+    return render(request, 'biblio/busqueda.html', {'filter': book_filter})

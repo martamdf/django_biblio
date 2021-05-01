@@ -3,17 +3,14 @@
 {% block title %} Actualizar Libro {% endblock %}
 
 {% block content %}
-<body>
+
+<div class="container">
     <h1>Formulario categoria</h1>
-    <form method="post"> 
-        {% csrf_token %} 
-        {{ form.as_p }} 
-        <input type="submit" value="Actualiza Categoría"> 
-    </form> 
-        <div>
-            
-        </div>      
-    </form>
-</body>
+        <form method="post"> 
+            {% csrf_token %} 
+            {{ form.as_p }} 
+            <input type="submit" value="Actualiza Categoría"> 
+        </form> 
+</div>
+
 {% endblock %}
-</html>

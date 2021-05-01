@@ -3,20 +3,14 @@
 {% block title %} Actualizar Libro {% endblock %}
 
 {% block content %}
-<body>
+<div class="container">
     <h1>Formulario Libro</h1>
-
-    <p><a href="www.google.es"></a></p>
-
-    <form method="post"> 
-        {% csrf_token %} 
-        {{ form.as_p }} 
-        <input type="submit" value="Actualiza Libro"> 
-    </form> 
-        <div>
-            
-        </div>      
-    </form>
-</body>
+        <div class="form-group">
+            <form method="post"> 
+                {% csrf_token %} 
+                {{ form.as_p }} 
+                <input type="submit" class="btn btn-primary" value="Actualiza Libro"> 
+            </form> 
+        </div>
+</div>
 {% endblock %}
-</html>
